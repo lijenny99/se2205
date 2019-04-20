@@ -4,7 +4,7 @@
 
 - **Graph**: Express *relationships* amongst entities (eg. connections in social media, coupling amongst systems, constraints amongst components, etc.)
   - Edges can be ordered (**directed**) or unordered (**undirected**)
-  - A **path** from v<sub>i</sub>, v<sub>j</sub> of length _n_ consists of a sequences of edges _P = e1, …, e<sub>n</sub>_ that connect these vertices (for directed graphs, these edges must be in the same direction)
+  - A **path** from v<sub>i</sub>, v<sub>j</sub> of length _n_ consists of a sequences of edges _P = e<sub>1</sub>, …, e<sub>n</sub>_ that connect these vertices (for directed graphs, these edges must be in the same direction)
   - **Cycle:** Path that starts and ends at the same vertex while visiting remaining vertices in the path only once
   - **Connected:** No vertices are disjoint
   - **Unconnected:** Vertices are disjoint
@@ -751,9 +751,9 @@ struct Node * leftRotate(struct Node * n) {
     - One subtree with height being at least `h-1`
     - Another subtree with height being at least `h-2`
   - Assuming that the AVL tree under consideration is an extended binary tree (empty children are also accounted for) then the above is a recurrence relation
-    - N~1~ = 1
-    - N~2~ = 2
-    - N~h~ = N~h-1~ + N~h-2~ + 1
+    - N<sub>1</sub> = 1
+    - N<sub>2</sub> = 2
+    - N<sub>h</sub> = N<sub>h-1</sub> + N<sub>h-2</sub> + 1
   - Height is **bounded** by ==log(n)== and therefore that is the AVL tree’s complexity
   - During an insertion, the tree may need to be **rebalanced**
   - Since balancing operations require constant time, complexity of insertion and deletion is also ==O(logn)==
