@@ -574,7 +574,7 @@ protected void downheap (int j) {
   - Find out which nodes are not leaves and start from the leftmost node
   - Apply “downheap” on that node and repeat until root is reached
 - Comparison with other Sorting Algorithms 
-  - Bubble sort: ==O(n^2^)==
+  - Bubble sort: ==O(n<sup>2</sup>)==
   - Heapifying a tree: ==O(n)==
   - Sorting a heap: ==O(nlogn)==
   - Retrieving/removing the largest value from array sorted by bubble sort: ==O(1)==

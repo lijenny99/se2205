@@ -90,12 +90,12 @@ public Iterable<Vertex<V>> breadthFirstTrav(Vertex<V> u) {
   LLQ.enqueue(u);
   Vertex<V> v;
   while (!isEmpty(LLQ)) {
-    V = LLQ.dequeue();
+    v = LLQ.dequeue();
     snapshot.add(v);
-    visitedList[v.getLabel()] = 1;
     for (Edge<E> e: outgoingEdges(v))
       if (visitedList[opposite(v,e).getLabel()] == 0) {
         LLQ.enqueue(opposite(v,e));
+        visitedList[opposite(v,e).getLabel()] = 1;
       }
   }
   return snapshot;
@@ -118,10 +118,10 @@ public Iterable<Vertex<V>> depthFirstTrav(Vertex<V> s) {
   while(!isEmpty(LLS)) {
     v = LLS.pop();
     snapshot.add(v);
-    visitedList[v.getLabel()] = 1;
     for (Edge<E> e: outgoingEdges(v)) {
       if (visitedList[opposite(v,e).getLabel()]!=1)
         tempS.push(opposite(v,e));
+        visitedList[opposite(v,e).getLabel()] = 1;
     }
     while(!isEmpty(tempS))
       LLS.push(tempS.pop());
